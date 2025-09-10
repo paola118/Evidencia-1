@@ -1,0 +1,21 @@
+#Diccionario 
+inventario = []
+
+while True:
+    nombre = input("Indica el nombre del producto (X para terminar): ")
+    if nombre.upper() == "X":
+        break
+    cantidad = int(input("Indica la cantidad disponible: "))
+    precio = float(input("Indica el precio unitario: "))
+
+    producto = {
+        "nombre": nombre,
+        "cantidad": cantidad,
+        "precio": precio
+    }
+    inventario.append(producto)
+    print(f"\nProducto '{nombre}' registrado correctamente.\n")
+
+print("\nInventario registrado:")
+for p in inventario:
+    print(f"- Producto: {p['nombre']}, Cantidad: {p['cantidad']}, Precio: ${p['precio']}")
