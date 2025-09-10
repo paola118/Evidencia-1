@@ -1,0 +1,12 @@
+#Lista
+inventario = []
+
+while True:
+    producto = input("Indica el nombre del producto a registrar (X para terminar): ")
+    if producto.upper() == "X":
+        break
+    inventario.append(producto)
+
+print("\nLos productos registrados fueron:")
+for item in inventario:
+    print("-", item)
